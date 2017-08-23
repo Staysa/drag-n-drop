@@ -1,0 +1,147 @@
+body{margin: 0;}
+
+/*TABS*/
+.tabs {
+    position: relative;
+    min-height: 300px;
+    clear: both;
+    margin: 0 0 30px 460px;
+}
+.tabs > div label {
+    margin-left: -460px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    background-color: #141c38;
+    text-transform: uppercase;
+    padding: 20px 10px 20px 50px;
+    font-size: 24px;
+    width: 402px;
+    overflow: hidden;
+    transition: background-color 0.15s linear;
+    z-index: 2;
+}
+.tabs > div label:hover {
+    background-color: #222b4a;
+}
+.tabs > div [type=radio] {
+    display: none;
+}
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-left: -460px;
+}
+[type=radio]:checked ~ label {
+    z-index: 2;
+    border: none;
+    border-bottom: 0;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    color: #333;
+    background-color: #fff;
+    text-transform: uppercase;
+    padding: 20px 10px 20px 50px;
+    font-size: 24px;
+    width: 400px;
+    top: 2px;
+    left: 2px;
+}
+[type=radio]:checked ~ label:hover {
+    background-color: #fff;
+    cursor: default;
+}
+[type=radio]:checked ~ label ~ .content {
+    z-index: 1;
+    border: none;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.button {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 10px;
+    color: #fff;
+    background-color: #141c38;
+    text-transform: uppercase;
+    padding: 20px 10px;
+    font-size: 24px;
+    width: 200px;
+}
+.button:hover {
+    background-color: #9298ad;
+}
+.back {
+    width: 100px;
+    padding: 15px;
+    font-size: 18px;
+    background: #ececec;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 100;
+    transition: background-color 0.2s linear;
+}
+.first-block {
+    background: #141c38;
+}
+
+/*components*/
+.option .component {
+    position: absolute;
+    top: 100px;
+    z-index: -1;
+}
+textarea.component {
+    resize: none;
+    min-width: 264px;
+    min-height: 114px;
+    background: #fff;
+    padding: 15px;
+}
+textarea.component {
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    border: 3px dashed #fff;
+    transition: border 0.2s linear;
+}
+textarea.component:focus {
+    outline: none;
+    border: 3px dashed #ccc;
+}
+button.component {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 21px;
+    margin-bottom: 24px;
+    border: none;
+}
+button.component:focus {
+    outline: none;
+}
+#okButton {
+    color: #304e09;
+    background: #aeea00;
+}
+#cancelButton {
+    color: #ffddf0;
+    background: #ff1744;
+}

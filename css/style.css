@@ -1,0 +1,238 @@
+.all {
+    height: 100vh;
+}
+/*dropdown*/
+.name-canvas {
+    background: none;
+    display: block;
+    font-size: 36px;
+    color: #fff;
+    width: 80%;
+    border: none;
+    height: auto;
+    padding: 30px 0 5px;
+    margin: 10px auto 50px;
+    cursor: pointer;
+}
+.name-canvas:focus {
+    outline: none;
+}
+option {
+    background: none;
+    color: #333;
+}
+/*sidebar*/
+.sidebar {
+    width: 460px;
+    height: 100%;
+    background: #141c38;
+    display: inline-block;
+    float: left;
+    color: #fff;
+}
+/*text*/
+.text, .buttons, .img {
+    display: block;
+    margin: 0 auto 30px;
+    width: 300px;
+    height: 150px;
+}
+.text textarea {
+    resize: none;
+    min-width: 264px;
+    min-height: 114px;
+    background: #fff;
+    padding: 15px;
+}
+textarea {
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    border: 3px dashed #fff;
+    transition: border 0.2s linear;
+}
+textarea:focus {
+    outline: none;
+    border: 3px dashed #ccc;
+}
+.buttons button {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    font-size: 21px;
+    margin-bottom: 24px;
+    border: none;
+}
+button:focus {
+    outline: none;
+}
+#okButton {
+    color: #304e09;
+    background: #aeea00;
+}
+#cancelButton {
+    color: #ffddf0;
+    background: #ff1744;
+}
+.control {
+    position: absolute;
+    height: 150px;
+    background: rgba(20, 28, 56, 0.63);
+    box-shadow: -20px 1px 17px 17px rgba(20, 28, 56, 0.66);
+    width: 460px;
+    bottom: 0;
+}
+.control > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 45px;
+}
+.control > div:first-child input:hover,
+.control > div:first-child label:hover {
+    cursor: pointer;
+}
+.control > div:first-child {
+    margin-bottom: 20px;
+}
+.control > div:first-child input {
+    width: 30px;
+    height: 30px;
+}
+.control > div:first-child label {
+    font-size: 24px;
+    margin: 3px 0 0 15px;
+}
+.control > div:last-child a {
+    margin-left: 10px;
+}
+.control a,
+.button {
+    width: 100px;
+    padding: 20px 5px;
+    border: none;
+    background: #314179;
+    color: #eaefff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    transition: background 0.2s linear;
+}
+.control a:hover,
+.button:hover {
+    background: #2645af;
+    cursor: pointer;
+}
+
+/*field*/
+.main {
+    width: calc(100% - 460px);
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    z-index: -1;
+}
+#close {
+    display: block;
+    font-size: 150px;
+    color: #eaf2f9;
+    background: none;
+    border: none;
+    position: absolute;
+    top: -15px;
+    right: 5px;
+    transition: color 0.2s linear;
+}
+#close:hover {
+    color: #afbfcc;
+    cursor: pointer;
+}
+#close:focus {
+    outline: none;
+}
+/*modal*/
+.hide{display: none;}
+.label {
+    cursor: pointer;
+    user-select: none;
+}
+.all-modal .modal {
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transition: opacity .3s;
+}
+.all-modal .modal>div {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    max-height: 90%;
+    padding: 20px 20px 5px;
+    background-color: #fff;
+    box-shadow: 0 0 30px 14px rgb(255, 255, 255);
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.all-modal .modal-x {
+    font-family: serif;
+    position: absolute;
+    z-index: 2;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+    border-radius: 50%;
+    font-size: 36px;
+    line-height: 25px;
+    text-align: center;
+}
+.all-modal .modal-x2 {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.all-modal input:checked+.modal {
+    opacity: 1;
+    right: 0;
+}
+.all-modal .button:hover,.modal-x:hover {opacity: 0.7;}
+.all-modal .modal>div::-webkit-scrollbar {display: none;}
+.title {
+    font-size: 26px;
+    text-align: center;
+    color: #333;
+}
+.item-wrap {
+    margin: 30px 0;
+}
+.item-wrap li {
+    list-style: none;
+    padding-bottom: 10px;
+}
+.item-wrap li button {
+    font-size: 24px;
+    text-decoration: none;
+    color: #06132f;
+    border: none;
+    background: #fff;
+}
+.item-wrap li button:hover {
+    text-decoration: underline;
+    color: #5eaf76;
+    cursor: pointer;
+}
+.content-wrap {
+    text-align: center;
+}

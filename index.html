@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>start page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+<body>
+<div class="all">
+    <section class="sidebar">
+        <div class="option">
+                <input type="text" id="nameCanvas" size="30" maxlength="30" class="name-canvas" placeholder="Canvas name" required>
+                <div class="text">
+                    <textarea id="text" placeholder="Add your text" class="component"></textarea>
+                </div>
+                <div class="buttons">
+                    <button type="button" id="okButton" class="component">Button OK</button>
+                    <button type="button" id="cancelButton" class="component">Button Cancel</button>
+                </div>
+                <div class="img" id="imgWrap">
+                    <img src="img/pony.png" id="pony" class="component">
+                </div>
+        </div>
+        <div class="control">
+            <div>
+                <input class="" type="checkbox" id="publish" checked />
+                <label for="publish">Publish</label>
+            </div>
+            <div>
+                <label for="point" class="button" type="button" id="loadItem">Load</label>
+                <a href="#" type="button" id="save">Save</a>
+                <a href="/test_Drag-n-Drop/gallery.html" type="button" id="gallery">Gallery</a>
+            </div>
+        </div>
+    </section>
+    <button id="close" type="button">&times;</button>
+    <main class="main">
+        <div id="canvas" class="canvas"></div>
+    </main>
+    <div class="all-modal">
+        <input class="hide" type="checkbox" id="point"/>
+        <div class="modal">
+            <label class="modal-x2" for="point"></label>
+            <div>
+                <label class="modal-x" for="point">&times;</label>
+                <h3 class="title">Load:</h3>
+                <div id="nothing">
+                    <p>You have nothing. If you need create items - add elements at white canvas and press "Save".</p>
+                </div>
+                <div id="hideEmpty">
+                    <form  name="itemForm" action="" method="post">
+                        <ul class="item-wrap" id="items">
+                        </ul>
+                        <div class="content-wrap">
+                            <label for="point" class="button" type="button">Cancel</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript" src="js/script.js"></script>
+</html>
